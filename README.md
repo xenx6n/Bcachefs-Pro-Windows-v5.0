@@ -27,8 +27,8 @@ Unlike generic copy scripts or basic backup utilities, **Bcachefs Pro Windows v5
 Ensure your local deployment workspace mirrors the file layout below:
 
 ```text
-Bcachefs_Windows_v7/
-├── bcachefs_v7_8.py        # Core Python Tkinter GUI & Synchronization Wrapper
+Bcachefs_Windows_v5/
+├── bcachefs_v5.py        # Core Python Tkinter GUI & Synchronization Wrapper
 ├── rclone.exe              # Standalone Rclone Engine Binary (Must be placed here)
 └── bcachefs_compressor.bat # Automatically generated at runtime for LZX compression
 ```
@@ -46,7 +46,7 @@ Bcachefs_Windows_v7/
 2.  Open your terminal (**CMD** or **PowerShell**) as **Administrator** inside the project folder.
 3.  Execute the supervisor script:
     ```bash
-    python bcachefs_v7_8.py
+    python bcachefs_v5.py
     ```
 4.  Interact with the graphical control dashboard:
     *   Select your **1. Sursa Principală HDD** — your long-term storage HDD source folder containing your original files (remains completely intact).
