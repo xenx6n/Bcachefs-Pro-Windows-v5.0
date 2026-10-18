@@ -12,6 +12,7 @@ Specially developed and tailored for clean, lightweight, or de-bloated operating
 
 Unlike generic copy scripts or basic backup utilities, **Bcachefs Pro Windows v5.0** introduces advanced low-level I/O optimizations straight into user-space:
 
+*   **⚠️ Automated Target Emptying (Recycle Bin Safety):** To guarantee a completely clean installation and bypass manual cleanup, the engine automatically targets the destination folder and moves **all pre-existing files and folders directly to the Windows Recycle Bin** right before the sync operation begins.
 *   **Safe Mirroring & Drive Flattening (`rclone sync`):** Your master HDD source directory remains **100% intact and untouched**. The engine safely mirrors its contents onto the fast SSD. Any residual or orphan files left on the SSD that no longer exist on the HDD source are automatically purged, keeping your active cache pristine.
 *   **Ultra Fast-Transfer Mode (Hardware Saturation):**
     *   `--fast-list`: Scans and maps the directory structure directly into RAM, eliminating linear directory listing latency.
@@ -50,6 +51,9 @@ Bcachefs_Windows_v5/
     ```
 4.  Interact with the graphical control dashboard:
     *   Select your **1. Sursa Principală HDD** — your long-term storage HDD source folder containing your original files (remains completely intact).
-    *   Select your **2. Destinație SSD** — your official SSD target folder where files will be synchronized and compressed.
-5.  Click the **"Lansează Sincronizarea Rapidă"** button to start the execution.
+    *   Select your **2. Destinație SSD** — your official SSD target folder.
+    
+    > ⚠️ **CRITICAL DATA NOTICE:** Choosing the **2. Destinație SSD** folder means the engine will **automatically wipe its current contents** by sending all existing files to the Windows Recycle Bin before copying the new ones. This replaces manual deletion but allows you to recover files from the Recycle Bin if selected by mistake.
+
+5.  Click the **"Launch Fast Synchronization"** button to start the execution.
 6.  The application will process the multi-threaded file pipeline in the background and pop open an automated console displaying the progress of the final LZX block compaction.
